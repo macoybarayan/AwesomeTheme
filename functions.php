@@ -185,3 +185,23 @@ function cc_mime_types($mimes) {
   return $mimes;
 }
 add_filter('upload_mimes', 'cc_mime_types');
+
+/**
+ * Register the Slider post type.
+ *
+ * @see register_post_type()
+ */
+function awt_create_post_type() {
+    register_post_type( 'slider',
+        array(
+            'labels' => array(
+                'name'          => __( 'Homepage Slider', 'textdomain' ),
+                'singular_name' => __( 'Homepage Slider', 'textdomain' )
+            ),
+            'public'      => true,
+            'has_archive' => true,
+            'menu_icon'   => 'dashicons-format-gallery',
+        )
+    );
+}
+add_action( 'init', 'awt_create_post_type', 0 );
