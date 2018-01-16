@@ -5,17 +5,16 @@ Awesome Theme - Wordpress Starter Theme
 
 Hi. I'm a starter theme called `Awesome Theme`. You can use me as a starter theme for your custom Wordpress Theme. 
 
-My ultra-minimal CSS might make me look like theme tartare but that means less stuff to get in your way when you're designing your awesome theme. Here are some of the other more interesting things you'll find here:
+WHAT's INSIDE?
+----------------
 
-* A just right amount of lean, well-commented, modern, HTML5 templates.
-* A helpful 404 template.
-* A custom header implementation in `inc/custom-header.php` just add the code snippet found in the comments of `inc/custom-header.php` to your `header.php` template.
-* Custom template tags in `inc/template-tags.php` that keep your templates clean and neat and prevent code duplication.
-* Some small tweaks in `inc/template-functions.php` that can improve your theming experience.
-* A script at `js/navigation.js` that makes your menu a toggled dropdown on small screens (like your phone), ready for CSS artistry. It's enqueued in `functions.php`.
-* 2 sample CSS layouts in `layouts/` for a sidebar on either side of your content.
-* Smartly organized starter CSS in `style.css` that will help you to quickly get your design off the ground.
-* Licensed under GPLv2 or later. :) Use it to make something cool.
+1. Built in Foundation 6 framework
+2. Custom Metabox 2
+3. Has Theme Options
+4. Basic sections like Homepage Slider, Header, Footer, Contact Pages and Default pages
 
-Getting Started
----------------
+
+I'm just your starter theme so you can modify me whatever you want me to look like. Feel free to work around.
+
+
+Thanks,
