@@ -106,16 +106,16 @@ add_action( 'cmb2_admin_init', 'awesome_membership_metabox' );
 /**
  * Hook in and add a demo metabox. Can only happen on the 'cmb2_admin_init' or 'cmb2_init' hook.
  */
-function awesome_membership_metabox() {
+function awesome_slider_metabox() {
 	$prefix = 'awt_';
 
 	/**
 	 * Sample metabox to demonstrate each field type included
 	 */
 	$cmb_home = new_cmb2_box( array(
-		'id'            => $prefix . 'home_metabox',
+		'id'            => $prefix . 'slider_metabox',
 		'title'         => esc_html__( 'Details', 'cmb2' ),
-		'object_types'  => array( 'page' ), // Post type
+		'object_types'  => array( 'slide' ), // Post type
 		'show_on'      => array( 'key' => 'id', 'value' => array( 23 ) ),
 		'context'      => 'normal', //  'normal', 'advanced', or 'side'
 		'priority'     => 'high',  //  'high', 'core', 'default' or 'low'

@@ -192,7 +192,7 @@ add_filter('upload_mimes', 'cc_mime_types');
  * @see register_post_type()
  */
 function awt_create_post_type() {
-    register_post_type( 'slider',
+    register_post_type( 'slide',
         array(
             'labels' => array(
                 'name'          => __( 'Homepage Slider', 'textdomain' ),
