@@ -17,4 +17,4 @@ WHAT's INSIDE?
 I'm just your starter theme so you can modify me whatever you want me to look like. Feel free to work around.
 
 
-Thanks,
+Cheers,
