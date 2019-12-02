@@ -131,9 +131,16 @@ $of_options[] = array( 	"name"=> "Favicon",
 	"type"=> "upload"
 );
 
-$of_options[] = array( 	"name"=> "Website Logo",
+$of_options[] = array( 	"name"=> "Mainguard Logo",
 	"desc"=> "Upload logo here. If empty, the sitename will display.",
 	"id"=> "logo",
+	"std"=> "",
+	"type"=> "upload"
+);
+
+$of_options[] = array( 	"name"=> "Matrimony Logo",
+	"desc"=> "Upload logo here. If empty, the sitename will display.",
+	"id"=> "logo_2",
 	"std"=> "",
 	"type"=> "upload"
 );
@@ -177,21 +184,21 @@ $of_options[] = array( 	"name"=> "Footer Settings",
 	"type"=> "heading"
 );
 
-$of_options[] = array( 	"name"=> "Footer Logo Light",
-	"desc"=> "Upload logo here.",
-	"id"=> "footer_logo_light",
-	// Use the shortcodes [site_url] or [site_url_secure] for setting default URLs
-	"std"=> "",
-	"type"=> "upload"
-);
+// $of_options[] = array( 	"name"=> "Footer Logo Light",
+// 	"desc"=> "Upload logo here.",
+// 	"id"=> "footer_logo_light",
+// 	// Use the shortcodes [site_url] or [site_url_secure] for setting default URLs
+// 	"std"=> "",
+// 	"type"=> "upload"
+// );
 
-$of_options[] = array( 	"name"=> "Footer Logo Dark",
-	"desc"=> "Upload logo here.",
-	"id"=> "footer_logo_dark",
-	// Use the shortcodes [site_url] or [site_url_secure] for setting default URLs
-	"std"=> "",
-	"type"=> "upload"
-);
+// $of_options[] = array( 	"name"=> "Footer Logo Dark",
+// 	"desc"=> "Upload logo here.",
+// 	"id"=> "footer_logo_dark",
+// 	// Use the shortcodes [site_url] or [site_url_secure] for setting default URLs
+// 	"std"=> "",
+// 	"type"=> "upload"
+// );
 
 $of_options[] = array( 	"name" => "Footer Link",
 	"desc" =>"",
@@ -205,7 +212,23 @@ $of_options[] = array( 	"name" => "Footer Text",
 	"std" 		=> "",
 	"type" 		=> "textarea");
 
+$of_options[] = array( 	"name" => "Facebook Link",
+	"desc" =>"",
+	"id" 		=> "facebook_link",
+	"std" 		=> "",
+	"type" 		=> "text");
 
+$of_options[] = array( 	"name" => "Linkedin Link",
+	"desc" =>"",
+	"id" 		=> "linkedin_link",
+	"std" 		=> "",
+	"type" 		=> "text");
+
+$of_options[] = array( 	"name" => "Twitter Link",
+	"desc" =>"",
+	"id" 		=> "twitter_link",
+	"std" 		=> "",
+	"type" 		=> "text");
 
 
 	}//End function: of_options()

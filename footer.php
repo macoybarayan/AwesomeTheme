@@ -17,21 +17,33 @@ global $data;
 
 	<footer id="colophon" class="site-footer">
 		<div class="row">
-			<div class="large-6 medium-6 column">
-				<div class="footer-logo">
-					<?php if(!is_home() && !is_front_page()): ?>
-						<a href="<?= site_url() ?>"><img src="<?= $data['footer_logo_dark'] ?>"></a>
-					<?php else: ?>
-							<a href="<?= site_url() ?>"><img src="<?= $data['footer_logo_light'] ?>"></a>
-					<?php endif; ?>
-				</div>
+			<div class="large-12 columns">
+				<hr/>
 			</div>
-			<div class="large-6 medium-6 column">
-				<div class="footer-info">
-					<div class="menu-link"><?= $data['footer_link'] ?></div>
+			<div class="large-6 medium-6 small-12 column">
+				<div class="footer-info">					
 					<div class="copyright">© <?= date('Y') ?> <?= $data['footer_text'] ?></div>
 				</div>
 			</div>
+			<div class="large-6 medium-6 small-12 column">
+				<div class="menu-link">
+					<!-- <?= $data['footer_link'] ?> -->
+				
+					<ul>
+						<?php if($data['facebook_link']): ?>
+							<li><a href="<?= $data['facebook_link'] ?>" target="_blank"><img src="<?= get_bloginfo('stylesheet_directory') ?>/assets/images/facebook.png" alt="Facebook" title="Facebook"></a></li>
+						<?php endif ?>
+
+						<?php if($data['linkedin_link']): ?>
+							<li><a href="<?= $data['linkedin_link'] ?>" target="_blank"><img src="<?= get_bloginfo('stylesheet_directory') ?>/assets/images/linkedin.png" alt="Linkedin" title="Linkedin"></a></li>
+						<?php endif ?>
+
+						<?php if($data['twitter_link']): ?>
+							<li><a href="<?= $data['twitter_link'] ?>" target="_blank"><img src="<?= get_bloginfo('stylesheet_directory') ?>/assets/images/twitter.png" alt="Twitter" title="Twitter"></a></li>
+						<?php endif ?>
+					</ul>
+				</div>
+			</div>			
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

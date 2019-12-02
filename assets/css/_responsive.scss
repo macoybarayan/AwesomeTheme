@@ -1,0 +1,27 @@
+@media only screen and (max-width: 460px) {
+    .price-container{
+
+    }
+
+    footer{
+        text-align: center;
+        .menu-link{
+            text-align: center !important;
+            margin-top: 10px;
+        }
+    }
+
+
+}
+
+@media only screen and (max-width: 767px) {
+    .how-it-works-container{
+        .elementor-col-25{
+            max-width: 50%;
+            
+            .elementor-image-box-img img{
+                max-width: 60px;
+            }
+        }
+    }
+}

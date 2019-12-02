@@ -139,14 +139,21 @@ function awesome_theme_scripts() {
 	wp_enqueue_script( 'awesome_theme-modal_js', get_template_directory_uri() . '/assets/js/custombox.min.js', array('jquery'), '20151215', true );
 	wp_enqueue_style( 'awesome_theme-modal_style', get_template_directory_uri() . '/assets/css/custombox.min.css' );
 
-
+	
 	wp_enqueue_script( 'awesome_theme-main_js', get_template_directory_uri() . '/assets/js/main.js', array("jquery"), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'awesome_theme_scripts' );
+add_action( 'wp_enqueue_scripts', 'awesome_theme_scripts', 99 );
+
+function admin_scripts($hook) {
+    //angularjs
+	wp_enqueue_script( 'angular_js', get_template_directory_uri() . '/assets/js/angular.min.js', array('jquery'), '20151215', true );
+	wp_enqueue_script( 'main_controller', get_template_directory_uri() . '/assets/angular/mainController.js', array('jquery'), '20151215', true );
+}
+add_action('admin_enqueue_scripts', 'admin_scripts');
 
 /**
  * Implement the Custom Header feature.
@@ -168,7 +175,7 @@ require get_template_directory() . '/inc/template-functions.php';
  */
 require get_template_directory() . '/inc/customizer.php';
 
-require get_template_directory() . '/inc/cmb2/metabox.php';
+// require get_template_directory() . '/inc/cmb2/metabox.php';
 
 require get_template_directory() . '/admin/index.php';
 
@@ -191,17 +198,28 @@ add_filter('upload_mimes', 'cc_mime_types');
  *
  * @see register_post_type()
  */
-function awt_create_post_type() {
-    register_post_type( 'slide',
-        array(
-            'labels' => array(
-                'name'          => __( 'Homepage Slider', 'textdomain' ),
-                'singular_name' => __( 'Homepage Slider', 'textdomain' )
-            ),
-            'public'      => true,
-            'has_archive' => true,
-            'menu_icon'   => 'dashicons-format-gallery',
-        )
-    );
+// function awt_create_post_type() {
+//     register_post_type( 'testimonial',
+//         array(
+//             'labels' => array(
+//                 'name'          => __( 'Homepage Slider', 'textdomain' ),
+//                 'singular_name' => __( 'Homepage Slider', 'textdomain' )
+//             ),
+//             'public'      => true,
+//             'has_archive' => true,
+//             'menu_icon'   => 'dashicons-format-gallery',
+//         )
+//     );
+// }
+// add_action( 'init', 'awt_create_post_type', 0 );
+
+add_action( 'admin_menu', 'add_user_data_management' );
+function add_user_data_management() {
+  // add_menu_page( $page_title, $menu_title, $capability, $menu_slug, $function, $icon_url, $position );
+  add_menu_page( 'Data Management', 'Data Management', 'manage_options', 'data-management', 'wps_theme_func', 'dashicons-welcome-widgets-menus', 90 );
 }
-add_action( 'init', 'awt_create_post_type', 0 );
+
+function wps_theme_func(){
+	echo '<div class="wrap" ng-app="myApp" ng-controller="MainController"><div id="icon-options-general" class="icon32"><br></div>
+	<h2>Data Management</h2></div>';
+}
